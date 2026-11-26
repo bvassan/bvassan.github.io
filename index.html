@@ -1,0 +1,1405 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>水密桃黄水流流 - 鲜果纪实影像,夏日果园的温柔流动</title>
+<meta name="description" content="水密桃黄水流流是一个专注鲜果与夏日流水影像的视频品牌，用镜头记录果园林间的阳光、露水与采摘时刻，呈现真实、温柔、可持续的鲜果生活美学。">
+<style>
+/* ========== Reset & Base ========== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --peach-1:#ffd9a8;
+  --peach-2:#ffb877;
+  --peach-3:#ff9a5c;
+  --peach-4:#f4773f;
+  --peach-5:#d95a28;
+  --cream:#fff7ee;
+  --cream-2:#fdeede;
+  --ink:#3a2417;
+  --ink-2:#5c4130;
+  --ink-3:#8a6b56;
+  --water-1:#9fd7c8;
+  --water-2:#63b3a3;
+  --water-3:#2f8575;
+  --line:rgba(120,80,50,.16);
+  --shadow:0 18px 45px -20px rgba(120,60,20,.35);
+  --radius:22px;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+h1,h2,h3,h4{line-height:1.25;font-weight:800;letter-spacing:.01em}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+::selection{background:var(--peach-2);color:#fff}
+
+/* ========== Layout ========== */
+.wrap{width:min(1180px,92vw);margin:0 auto}
+section{position:relative;padding:96px 0}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.5em;
+  font-size:.8rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--peach-5);font-weight:700;margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--peach-4);border-radius:2px}
+.sec-title{font-size:clamp(1.7rem,3.4vw,2.7rem);color:var(--ink);margin-bottom:16px}
+.sec-title em{font-style:normal;color:var(--peach-4);position:relative}
+.sec-title em::after{
+  content:"";position:absolute;left:0;right:0;bottom:4px;height:10px;
+  background:linear-gradient(90deg,var(--peach-1),transparent);z-index:-1;border-radius:6px;
+}
+.sec-lead{color:var(--ink-3);max-width:640px;font-size:1.02rem}
+
+/* ========== Header ========== */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  backdrop-filter:blur(14px);
+  background:rgba(255,247,238,.82);
+  border-bottom:1px solid var(--line);
+  transition:box-shadow .3s;
+}
+.site-header.scrolled{box-shadow:0 6px 24px -16px rgba(120,60,20,.4)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:900;font-size:1.12rem;letter-spacing:.02em}
+.logo-mark{width:40px;height:40px;flex:none}
+.logo small{display:block;font-size:.62rem;font-weight:600;letter-spacing:.18em;color:var(--ink-3);line-height:1}
+.nav-links{display:flex;gap:30px;font-size:.94rem;font-weight:600;color:var(--ink-2)}
+.nav-links a{position:relative;padding:4px 0;transition:color .25s}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:0;width:0;height:2px;
+  background:var(--peach-4);transition:width .28s ease;border-radius:2px;
+}
+.nav-links a:hover{color:var(--peach-5)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{
+  padding:10px 22px;border-radius:100px;font-size:.9rem;font-weight:700;
+  background:linear-gradient(135deg,var(--peach-3),var(--peach-5));
+  color:#fff;box-shadow:0 10px 22px -12px rgba(217,90,40,.9);
+  transition:transform .25s,box-shadow .25s;
+}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 16px 28px -12px rgba(217,90,40,.95)}
+.burger{display:none;width:42px;height:42px;align-items:center;justify-content:center;flex-direction:column;gap:5px;border-radius:12px;border:1px solid var(--line)}
+.burger span{width:20px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{
+  display:none;overflow:hidden;max-height:0;transition:max-height .35s ease;
+  border-top:1px solid transparent;
+}
+.mobile-menu.open{max-height:340px;border-top-color:var(--line)}
+.mobile-menu ul{padding:12px 0 20px}
+.mobile-menu a{display:block;padding:12px 4px;font-weight:600;color:var(--ink-2);border-bottom:1px dashed var(--line)}
+
+/* ========== Hero ========== */
+.hero{
+  position:relative;overflow:hidden;
+  padding:70px 0 90px;
+  background:
+    radial-gradient(1100px 460px at 82% -8%,rgba(255,184,119,.55),transparent 62%),
+    radial-gradient(760px 400px at 8% 12%,rgba(159,215,200,.4),transparent 60%),
+    linear-gradient(180deg,var(--cream) 0%,var(--cream-2) 100%);
+}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{
+  font-size:clamp(2.4rem,6vw,4.4rem);
+  line-height:1.06;letter-spacing:-.01em;
+  background:linear-gradient(120deg,var(--peach-5) 0%,var(--peach-3) 46%,var(--water-3) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  margin-bottom:22px;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:.6em;font-size:.82rem;font-weight:700;
+  letter-spacing:.14em;color:var(--water-3);
+  background:rgba(99,179,163,.14);border:1px solid rgba(47,133,117,.22);
+  padding:7px 16px;border-radius:100px;margin-bottom:24px;
+}
+.hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--water-2);box-shadow:0 0 0 4px rgba(99,179,163,.2)}
+.hero p.lead{font-size:1.1rem;color:var(--ink-2);max-width:520px;margin-bottom:34px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:15px 30px;border-radius:100px;font-weight:700;font-size:.98rem;color:#fff;
+  background:linear-gradient(135deg,var(--peach-3),var(--peach-5));
+  box-shadow:0 16px 34px -16px rgba(217,90,40,.9);
+  transition:transform .25s,box-shadow .25s;
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 22px 40px -16px rgba(217,90,40,.95)}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 26px;border-radius:100px;font-weight:700;font-size:.95rem;
+  color:var(--ink);border:1.5px solid rgba(120,80,50,.28);background:rgba(255,255,255,.55);
+  transition:.25s;
+}
+.btn-ghost:hover{border-color:var(--peach-4);color:var(--peach-5);background:#fff}
+.hero-stats{display:flex;gap:34px;margin-top:44px;flex-wrap:wrap}
+.hero-stat strong{display:block;font-size:1.75rem;color:var(--peach-5);letter-spacing:-.02em;line-height:1.2}
+.hero-stat span{font-size:.82rem;color:var(--ink-3);letter-spacing:.06em}
+.hero-art{position:relative}
+.hero-art .frame{
+  border-radius:32px;overflow:hidden;box-shadow:var(--shadow);
+  border:1px solid rgba(255,255,255,.7);
+  transform:rotate(-1.5deg);
+  background:#fff;
+}
+.hero-art .frame svg{width:100%;height:auto}
+.badge-float{
+  position:absolute;right:-10px;bottom:26px;
+  background:rgba(255,255,255,.92);backdrop-filter:blur(8px);
+  border-radius:18px;padding:14px 18px;box-shadow:var(--shadow);
+  display:flex;align-items:center;gap:12px;transform:rotate(2deg);
+  border:1px solid rgba(255,255,255,.9);
+}
+.badge-float .ring{
+  width:38px;height:38px;border-radius:50%;flex:none;
+  background:conic-gradient(var(--peach-4) 0deg,var(--peach-1) 280deg,rgba(0,0,0,.06) 280deg);
+  display:grid;place-items:center;font-size:.7rem;font-weight:800;color:var(--peach-5);
+}
+.badge-float b{font-size:.86rem;display:block}
+.badge-float small{font-size:.72rem;color:var(--ink-3)}
+
+/* wave divider */
+.wave{position:absolute;left:0;right:0;bottom:-1px;line-height:0;pointer-events:none}
+.wave svg{width:100%;height:80px}
+
+/* ========== Marquee ========== */
+.marquee{
+  background:linear-gradient(90deg,var(--peach-5),var(--peach-3),var(--water-3));
+  color:#fff;overflow:hidden;padding:18px 0;
+}
+.marquee-track{display:flex;gap:52px;white-space:nowrap;width:max-content;animation:slide 34s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{font-weight:700;letter-spacing:.14em;font-size:.92rem;opacity:.95;display:flex;align-items:center;gap:52px}
+.marquee-track span::after{content:"◆";font-size:.6rem;opacity:.65}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ========== About / 品牌理念 ========== */
+.about{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-visual{position:relative}
+.about-visual .main{
+  border-radius:28px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.8);
+}
+.about-visual .sub{
+  position:absolute;right:-24px;bottom:-28px;width:52%;
+  border-radius:22px;overflow:hidden;border:5px solid var(--cream);
+  box-shadow:var(--shadow);
+}
+.about-copy p{color:var(--ink-2);margin-bottom:18px}
+.about-copy p strong{color:var(--peach-5)}
+.value-list{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.value-card{
+  background:#fff;border-radius:18px;padding:20px;border:1px solid var(--line);
+  transition:transform .3s,box-shadow .3s;
+}
+.value-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.value-card .ico{
+  width:42px;height:42px;border-radius:12px;display:grid;place-items:center;margin-bottom:12px;
+  background:linear-gradient(135deg,var(--peach-1),var(--peach-3));color:#fff;
+}
+.value-card h4{font-size:1rem;margin-bottom:6px}
+.value-card p{font-size:.86rem;color:var(--ink-3);margin:0;line-height:1.6}
+
+/* ========== 作品系列 ========== */
+.works{background:linear-gradient(180deg,var(--cream-2),var(--cream))}
+.works-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:44px}
+.filters{display:flex;gap:10px;flex-wrap:wrap}
+.filter-btn{
+  padding:9px 20px;border-radius:100px;font-size:.85rem;font-weight:700;
+  color:var(--ink-2);border:1px solid var(--line);background:#fff;transition:.25s;
+}
+.filter-btn:hover{border-color:var(--peach-3);color:var(--peach-5)}
+.filter-btn.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.work-card{
+  background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);
+  display:flex;flex-direction:column;transition:transform .35s,box-shadow .35s;cursor:pointer;
+}
+.work-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.work-thumb{position:relative;aspect-ratio:16/10;overflow:hidden}
+.work-thumb svg{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.work-card:hover .work-thumb svg{transform:scale(1.06)}
+.work-dur{
+  position:absolute;right:12px;bottom:12px;background:rgba(20,14,10,.72);color:#fff;
+  font-size:.72rem;padding:3px 9px;border-radius:7px;letter-spacing:.05em;
+}
+.work-cat{
+  position:absolute;left:12px;top:12px;background:rgba(255,255,255,.92);
+  font-size:.7rem;font-weight:700;color:var(--peach-5);padding:4px 11px;border-radius:100px;
+  letter-spacing:.06em;
+}
+.play-hint{
+  position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:opacity .35s;
+  background:radial-gradient(circle at center,rgba(0,0,0,.3),transparent 65%);
+}
+.work-card:hover .play-hint{opacity:1}
+.play-hint .pc{
+  width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.92);
+  display:grid;place-items:center;color:var(--peach-5);box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+.work-body{padding:20px 22px 24px;flex:1;display:flex;flex-direction:column}
+.work-body h3{font-size:1.1rem;margin-bottom:8px}
+.work-body p{font-size:.86rem;color:var(--ink-3);line-height:1.65;flex:1}
+.work-meta{display:flex;justify-content:space-between;align-items:center;margin-top:16px;font-size:.76rem;color:var(--ink-3)}
+.work-meta .tag{background:rgba(159,215,200,.24);color:var(--water-3);padding:3px 10px;border-radius:100px;font-weight:700}
+
+/* ========== 数据 / 影响力 ========== */
+.metrics{background:var(--ink);color:#fff;overflow:hidden}
+.metrics::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(700px 300px at 90% 10%,rgba(255,154,92,.22),transparent 60%),
+             radial-gradient(600px 320px at 5% 90%,rgba(99,179,163,.18),transparent 60%);
+}
+.metrics .wrap{position:relative;z-index:2}
+.metrics .eyebrow{color:var(--peach-2)}
+.metrics .sec-title{color:#fff}
+.metrics .sec-lead{color:rgba(255,255,255,.68)}
+.metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+.metric-card{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+  border-radius:20px;padding:28px 24px;transition:.3s;
+}
+.metric-card:hover{background:rgba(255,255,255,.09);transform:translateY(-5px)}
+.metric-card .num{font-size:2.3rem;font-weight:900;letter-spacing:-.02em;line-height:1.1;
+  background:linear-gradient(120deg,var(--peach-1),var(--peach-3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.metric-card .num small{font-size:1rem;margin-left:2px}
+.metric-card h4{font-size:.95rem;margin:10px 0 6px;color:#fff}
+.metric-card p{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.6;margin:0}
+
+/* ========== 播放器 / 精选影片 ========== */
+.feature{background:var(--cream);overflow:hidden}
+.feature-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.player{
+  border-radius:26px;overflow:hidden;position:relative;background:#1d1510;
+  box-shadow:0 30px 70px -32px rgba(70,35,15,.8);border:1px solid rgba(255,255,255,.6);
+}
+.player svg{width:100%;height:auto;display:block}
+.player-bar{
+  display:flex;align-items:center;gap:14px;padding:14px 18px;background:rgba(16,11,8,.92);
+  color:#fff;font-size:.78rem;
+}
+.player-bar .pb-play{width:34px;height:34px;border-radius:50%;background:var(--peach-4);display:grid;place-items:center;flex:none}
+.progress{flex:1;height:5px;border-radius:4px;background:rgba(255,255,255,.18);overflow:hidden}
+.progress i{display:block;height:100%;width:34%;border-radius:4px;background:linear-gradient(90deg,var(--peach-2),var(--peach-4))}
+.feature-list{display:flex;flex-direction:column;gap:14px;margin-top:26px}
+.feat-item{
+  display:flex;gap:16px;align-items:center;padding:14px;border-radius:16px;background:#fff;
+  border:1px solid var(--line);transition:.3s;cursor:pointer;
+}
+.feat-item:hover{border-color:var(--peach-3);transform:translateX(6px)}
+.feat-item .idx{font-size:.8rem;font-weight:800;color:var(--peach-4);width:26px;flex:none}
+.feat-item b{display:block;font-size:.94rem}
+.feat-item small{font-size:.76rem;color:var(--ink-3)}
+
+/* ========== 制作流程 ========== */
+.process{background:linear-gradient(180deg,var(--cream),var(--cream-2))}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:50px}
+.step{
+  background:#fff;border-radius:20px;padding:28px 24px;border:1px solid var(--line);
+  position:relative;transition:.32s;overflow:hidden;
+}
+.step::before{
+  content:attr(data-n);position:absolute;right:14px;top:6px;font-size:3.4rem;font-weight:900;
+  color:rgba(255,154,92,.13);line-height:1;
+}
+.step:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--peach-2)}
+.step .s-ico{
+  width:46px;height:46px;border-radius:13px;display:grid;place-items:center;margin-bottom:18px;
+  background:linear-gradient(135deg,var(--water-1),var(--water-2));color:#fff;
+}
+.step h4{font-size:1.02rem;margin-bottom:8px}
+.step p{font-size:.85rem;color:var(--ink-3);line-height:1.65;margin:0}
+
+/* ========== 团队 ========== */
+.team{background:var(--cream)}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:50px}
+.member{
+  background:#fff;border-radius:22px;overflow:hidden;border:1px solid var(--line);
+  text-align:center;transition:.35s;
+}
+.member:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.member .avatar{aspect-ratio:1/1;background:linear-gradient(150deg,var(--peach-1),var(--peach-3))}
+.member:nth-child(2) .avatar{background:linear-gradient(150deg,var(--water-1),var(--water-2))}
+.member:nth-child(3) .avatar{background:linear-gradient(150deg,var(--peach-2),var(--water-2))}
+.member:nth-child(4) .avatar{background:linear-gradient(150deg,var(--peach-4),var(--peach-5))}
+.member .info{padding:18px 16px 22px}
+.member h4{font-size:1rem;margin-bottom:4px}
+.member span{font-size:.78rem;color:var(--peach-5);font-weight:700;letter-spacing:.06em}
+.member p{font-size:.8rem;color:var(--ink-3);margin-top:8px;line-height:1.6}
+
+/* ========== 社区 ========== */
+.community{background:linear-gradient(180deg,var(--cream-2),var(--cream));overflow:hidden}
+.comm-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.post-card{
+  background:#fff;border-radius:22px;padding:24px;border:1px solid var(--line);
+  box-shadow:0 10px 30px -22px rgba(120,60,20,.5);margin-bottom:16px;transition:.3s;
+}
+.post-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.post-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.post-ava{width:40px;height:40px;border-radius:50%;flex:none;background:linear-gradient(135deg,var(--peach-2),var(--peach-4))}
+.post-ava.v2{background:linear-gradient(135deg,var(--water-1),var(--water-3))}
+.post-head b{font-size:.88rem;display:block}
+.post-head small{font-size:.72rem;color:var(--ink-3)}
+.post-card p{font-size:.88rem;color:var(--ink-2);line-height:1.7}
+.post-foot{display:flex;gap:18px;margin-top:14px;font-size:.76rem;color:var(--ink-3)}
+.post-foot span{display:inline-flex;align-items:center;gap:5px}
+.comm-cta{
+  background:linear-gradient(140deg,var(--ink),#5a3a24);color:#fff;border-radius:26px;
+  padding:40px;position:relative;overflow:hidden;
+}
+.comm-cta::after{
+  content:"";position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,154,92,.4),transparent 70%);
+}
+.comm-cta h3{font-size:1.5rem;margin-bottom:12px}
+.comm-cta p{color:rgba(255,255,255,.72);font-size:.92rem;margin-bottom:26px}
+.comm-form{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:2}
+.comm-form input{
+  flex:1;min-width:200px;padding:14px 20px;border-radius:100px;border:1px solid rgba(255,255,255,.24);
+  background:rgba(255,255,255,.08);color:#fff;font-size:.9rem;outline:none;transition:.25s;
+}
+.comm-form input::placeholder{color:rgba(255,255,255,.45)}
+.comm-form input:focus{border-color:var(--peach-2);background:rgba(255,255,255,.14)}
+.comm-form button{
+  padding:14px 28px;border-radius:100px;font-weight:700;color:var(--ink);
+  background:linear-gradient(135deg,var(--peach-1),var(--peach-3));transition:.25s;
+}
+.comm-form button:hover{transform:translateY(-2px);box-shadow:0 12px 26px -12px rgba(255,154,92,.9)}
+.form-note{font-size:.76rem;color:rgba(255,255,255,.5);margin-top:14px;position:relative;z-index:2}
+.form-success{color:var(--peach-1);font-weight:700;margin-top:14px;font-size:.88rem;display:none;position:relative;z-index:2}
+
+/* ========== FAQ ========== */
+.faq{background:var(--cream)}
+.faq-list{max-width:840px;margin:44px auto 0;display:flex;flex-direction:column;gap:14px}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.3s}
+.faq-item.open{border-color:var(--peach-2);box-shadow:var(--shadow)}
+.faq-q{
+  width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;
+  padding:20px 24px;font-weight:700;font-size:1rem;color:var(--ink);text-align:left;
+}
+.faq-q .plus{width:26px;height:26px;flex:none;border-radius:50%;display:grid;place-items:center;
+  background:var(--cream-2);color:var(--peach-5);font-weight:900;transition:.3s}
+.faq-item.open .faq-q .plus{transform:rotate(45deg);background:var(--peach-3);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 24px 22px;font-size:.9rem;color:var(--ink-3);line-height:1.75}
+
+/* ========== 联系 / 页脚 ========== */
+.contact{
+  background:linear-gradient(160deg,var(--peach-4),var(--peach-5) 55%,#a8401c);
+  color:#fff;position:relative;overflow:hidden;
+}
+.contact::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(600px 260px at 15% 90%,rgba(255,255,255,.16),transparent 60%),
+             radial-gradient(500px 260px at 85% 10%,rgba(159,215,200,.25),transparent 60%);
+}
+.contact .wrap{position:relative;z-index:2}
+.contact h2{font-size:clamp(1.8rem,3.6vw,2.8rem);margin-bottom:16px}
+.contact p.lead{color:rgba(255,255,255,.85);max-width:600px;margin-bottom:38px}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:48px}
+.c-item{
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);
+  border-radius:18px;padding:22px;backdrop-filter:blur(6px);transition:.3s;
+}
+.c-item:hover{background:rgba(255,255,255,.2);transform:translateY(-4px)}
+.c-item small{display:block;font-size:.74rem;letter-spacing:.14em;opacity:.75;margin-bottom:8px}
+.c-item b{font-size:1.02rem;font-weight:800;word-break:break-all}
+
+.site-footer{background:#1f1712;color:rgba(255,255,255,.68);padding:60px 0 30px}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+.footer-brand .logo{color:#fff;margin-bottom:16px}
+.footer-brand p{font-size:.86rem;line-height:1.8;max-width:300px;color:rgba(255,255,255,.55)}
+.footer-col h5{color:#fff;font-size:.9rem;margin-bottom:16px;letter-spacing:.06em}
+.footer-col a{display:block;font-size:.85rem;padding:5px 0;color:rgba(255,255,255,.6);transition:.25s}
+.footer-col a:hover{color:var(--peach-2);transform:translateX(3px)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);padding-top:24px;
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.78rem;color:rgba(255,255,255,.45);
+}
+.footer-bottom .socials{display:flex;gap:14px}
+.footer-bottom .socials a{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.16);display:grid;place-items:center;transition:.25s}
+.footer-bottom .socials a:hover{background:var(--peach-4);border-color:var(--peach-4);color:#fff}
+
+/* ========== 返回顶部 ========== */
+.to-top{
+  position:fixed;right:24px;bottom:24px;width:48px;height:48px;border-radius:50%;
+  background:linear-gradient(135deg,var(--peach-3),var(--peach-5));color:#fff;display:grid;place-items:center;
+  box-shadow:0 14px 30px -12px rgba(217,90,40,.9);opacity:0;pointer-events:none;transition:.3s;z-index:90;
+}
+.to-top.show{opacity:1;pointer-events:auto}
+.to-top:hover{transform:translateY(-4px)}
+
+/* ========== Reveal 动画 ========== */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ========== 响应式 ========== */
+@media(max-width:1024px){
+  .hero-grid,.about-grid,.feature-inner,.comm-grid{grid-template-columns:1fr;gap:44px}
+  .works-grid{grid-template-columns:repeat(2,1fr)}
+  .metric-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .about-visual .sub{right:0}
+}
+@media(max-width:760px){
+  section{padding:70px 0}
+  .nav-links,.nav-cta{display:none}
+  .burger{display:flex}
+  .mobile-menu{display:block}
+  .hero{padding:44px 0 70px}
+  .hero-stats{gap:24px}
+  .works-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .value-list{grid-template-columns:1fr}
+  .badge-float{right:0;bottom:10px;padding:10px 14px}
+  .team-grid{grid-template-columns:1fr}
+  .metrics .sec-lead{max-width:none}
+  .footer-grid{grid-template-columns:1fr;gap:30px}
+}
+@media(max-width:480px){
+  .metric-grid,.steps{grid-template-columns:1fr}
+  .hero-actions{width:100%}
+  .hero-actions .btn-primary,.hero-actions .btn-ghost{width:100%;justify-content:center}
+  .works-head{align-items:flex-start}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ================= Header ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="水密桃黄水流流 首页">
+      <svg class="logo-mark" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg1" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FFD9A8"/><stop offset=".55" stop-color="#FF9A5C"/><stop offset="1" stop-color="#2F8575"/>
+          </linearGradient>
+        </defs>
+        <rect width="44" height="44" rx="13" fill="url(#lg1)"/>
+        <path d="M22 12c5 0 9 4.2 9 9.4 0 6.2-4.8 11.6-9 11.6s-9-5.4-9-11.6C13 16.2 17 12 22 12z" fill="#fff" opacity=".92"/>
+        <path d="M22 12c1.4-2.6 3.6-3.6 6-3.2-.4 2.8-2.2 4.4-4.6 4.8" fill="#2F8575"/>
+        <path d="M18 24c1.6 2 4 3 6 3" stroke="#FF9A5C" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span>水密桃黄水流流<small>PEACH FLOW STUDIO</small></span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#about">品牌理念</a>
+      <a href="#works">作品系列</a>
+      <a href="#process">制作流程</a>
+      <a href="#team">创作团队</a>
+      <a href="#community">社区</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a href="#contact" class="nav-cta">合作洽谈</a>
+    <button class="burger" id="burger" aria-label="打开菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="wrap">
+      <ul>
+        <li><a href="#about">品牌理念</a></li>
+        <li><a href="#works">作品系列</a></li>
+        <li><a href="#process">制作流程</a></li>
+        <li><a href="#team">创作团队</a></li>
+        <li><a href="#community">社区</a></li>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#contact">合作洽谈</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= Hero ================= -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="hero-tag"><span class="dot"></span>鲜果纪实影像 · 2024 全新季</span>
+      <h1>水密桃黄水流流</h1>
+      <p class="lead">我们相信，最好的鲜果不需要包装，只需要被真实地看见。水密桃黄水流流以镜头记录果园里的阳光、露水与采摘时刻，让每一帧都带着夏日流动的温柔。</p>
+      <div class="hero-actions">
+        <a href="#works" class="btn-primary">
+          观看精选作品
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14l11-7L8 5z" fill="currentColor"/></svg>
+        </a>
+        <a href="#about" class="btn-ghost">了解品牌故事
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong data-count="128">0</strong><span>已上线影片</span></div>
+        <div class="hero-stat"><strong data-count="46">0</strong><span>合作果园</span></div>
+        <div class="hero-stat"><strong data-count="9">0</strong><span>影像奖项</span></div>
+      </div>
+    </div>
+    <div class="hero-art reveal">
+      <div class="frame">
+        <svg viewBox="0 0 520 420" role="img" aria-label="夏日果园与流水的水彩意象插画">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop stop-color="#FFF3E2"/><stop offset="1" stop-color="#FFE1C2"/>
+            </linearGradient>
+            <linearGradient id="peachG" x1="0" y1="0" x2="1" y2="1">
+              <stop stop-color="#FFD9A8"/><stop offset=".5" stop-color="#FF9A5C"/><stop offset="1" stop-color="#E5642F"/>
+            </linearGradient>
+            <linearGradient id="waterG" x1="0" y1="0" x2="1" y2="0">
+              <stop stop-color="#9FD7C8"/><stop offset="1" stop-color="#2F8575"/>
+            </linearGradient>
+            <linearGradient id="leafG" x1="0" y1="0" x2="1" y2="1">
+              <stop stop-color="#8CC7A8"/><stop offset="1" stop-color="#2F8575"/>
+            </linearGradient>
+            <filter id="soft"><feGaussianBlur stdDeviation="7"/></filter>
+          </defs>
+          <rect width="520" height="420" fill="url(#sky)"/>
+          <circle cx="410" cy="86" r="52" fill="#FFB877" opacity=".55" filter="url(#soft)"/>
+          <circle cx="410" cy="86" r="34" fill="#FFD9A8"/>
+          <path d="M0 262 Q120 218 240 252 T520 240 V420 H0 Z" fill="#FDEEDE"/>
+          <path d="M0 300 Q140 262 270 296 T520 286 V420 H0 Z" fill="#F7E2CC" opacity=".9"/>
+          <g>
+            <rect x="96" y="176" width="10" height="130" rx="5" fill="#B9805B"/>
+            <path d="M101 196 C60 176 40 150 46 120 C82 124 102 152 101 196Z" fill="url(#leafG)" opacity=".9"/>
+            <path d="M101 214 C144 196 166 172 160 140 C122 146 102 176 101 214Z" fill="url(#leafG)"/>
+            <circle cx="76" cy="188" r="21" fill="url(#peachG)"/>
+            <circle cx="120" cy="204" r="17" fill="url(#peachG)"/>
+            <circle cx="96" cy="160" r="14" fill="url(#peachG)"/>
+          </g>
+          <g>
+            <rect x="392" y="196" width="9" height="110" rx="4.5" fill="#B9805B"/>
+            <path d="M396 212 C360 196 344 174 350 150 C380 154 396 178 396 212Z" fill="url(#leafG)" opacity=".85"/>
+            <path d="M396 230 C432 214 450 194 446 168 C414 172 396 198 396 230Z" fill="url(#leafG)"/>
+            <circle cx="370" cy="212" r="16" fill="url(#peachG)"/>
+            <circle cx="410" cy="228" r="13" fill="url(#peachG)"/>
+          </g>
+          <path d="M0 356 Q90 330 170 350 T340 344 T520 356 V420 H0 Z" fill="url(#waterG)" opacity=".32"/>
+          <path d="M0 378 Q100 356 190 374 T380 370 T520 380 V420 H0 Z" fill="url(#waterG)" opacity=".5"/>
+          <g stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity=".7" fill="none">
+            <path d="M60 394 q28 -12 56 0"/>
+            <path d="M210 402 q30 -12 60 0"/>
+            <path d="M360 392 q26 -10 52 0"/>
+          </g>
+          <g>
+            <circle cx="264" cy="300" r="44" fill="url(#peachG)"/>
+            <path d="M264 258 c8 -14 22 -20 36 -17 c-3 17 -14 25 -30 27" fill="#2F8575"/>
+            <path d="M240 292 q14 10 30 8" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none" opacity=".65"/>
+          </g>
+          <g opacity=".85">
+            <circle cx="180" cy="120" r="4" fill="#fff"/>
+            <circle cx="230" cy="96" r="3" fill="#fff"/>
+            <circle cx="330" cy="130" r="3.4" fill="#fff"/>
+            <circle cx="60" cy="90" r="3" fill="#fff"/>
+          </g>
+        </svg>
+      </div>
+      <div class="badge-float">
+        <div class="ring">4K</div>
+        <div>
+          <b>超清纪实输出</b>
+          <small>HDR · 60fps 可选</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 40 C240 80 480 0 720 32 C960 64 1200 8 1440 40 V80 H0 Z" fill="#FFF7EE"/></svg>
+  </div>
+</section>
+
+<!-- ================= Marquee ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>鲜果纪实</span><span>果园光影</span><span>流水叙事</span><span>夏日温柔</span><span>真实采摘</span><span>可持续农业</span><span>产地溯源</span>
+    <span>鲜果纪实</span><span>果园光影</span><span>流水叙事</span><span>夏日温柔</span><span>真实采摘</span><span>可持续农业</span><span>产地溯源</span>
+  </div>
+</div>
+
+<!-- ================= 品牌理念 ================= -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-visual reveal">
+      <div class="main">
+        <svg viewBox="0 0 560 400" role="img" aria-label="果园清晨的水彩场景">
+          <defs>
+            <linearGradient id="aSky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#FFF6EA"/><stop offset="1" stop-color="#FCE7CF"/></linearGradient>
+            <linearGradient id="aLeaf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#A8D9C2"/><stop offset="1" stop-color="#3C9483"/></linearGradient>
+            <linearGradient id="aFruit" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFD9A8"/><stop offset=".55" stop-color="#FF9A5C"/><stop offset="1" stop-color="#D95A28"/></linearGradient>
+          </defs>
+          <rect width="560" height="400" fill="url(#aSky)"/>
+          <circle cx="120" cy="90" r="54" fill="#FFE0BC" opacity=".7"/>
+          <path d="M0 250 Q140 210 280 244 T560 232 V400 H0Z" fill="#F3DCC2"/>
+          <path d="M0 300 Q170 268 320 300 T560 294 V400 H0Z" fill="#EBCBA9" opacity=".75"/>
+          <g>
+            <path d="M280 300 C280 236 250 200 200 190" stroke="#8A5B3C" stroke-width="12" fill="none" stroke-linecap="round"/>
+            <path d="M280 300 C280 240 318 204 372 198" stroke="#8A5B3C" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <path d="M280 300 L280 200" stroke="#8A5B3C" stroke-width="13" stroke-linecap="round"/>
+            <g>
+              <ellipse cx="200" cy="186" rx="34" ry="24" fill="url(#aLeaf)" transform="rotate(-22 200 186)"/>
+              <ellipse cx="372" cy="196" rx="32" ry="22" fill="url(#aLeaf)" transform="rotate(18 372 196)"/>
+              <ellipse cx="252" cy="168" rx="30" ry="21" fill="url(#aLeaf)" transform="rotate(-8 252 168)"/>
+              <ellipse cx="316" cy="172" rx="30" ry="21" fill="url(#aLeaf)" transform="rotate(10 316 172)"/>
+            </g>
+            <circle cx="212" cy="222" r="20" fill="url(#aFruit)"/>
+            <circle cx="262" cy="238" r="17" fill="url(#aFruit)"/>
+            <circle cx="336" cy="228" r="18" fill="url(#aFruit)"/>
+            <circle cx="360" cy="252" r="13" fill="url(#aFruit)"/>
+          </g>
+          <g opacity=".8">
+            <ellipse cx="90" cy="352" rx="70" ry="16" fill="#9FD7C8" opacity=".5"/>
+            <ellipse cx="470" cy="362" rx="86" ry="18" fill="#9FD7C8" opacity=".42"/>
+          </g>
+        </svg>
+      </div>
+      <div class="sub">
+        <svg viewBox="0 0 300 240" role="img" aria-label="水珠与桃形细节插画">
+          <rect width="300" height="240" fill="#FFF7EE"/>
+          <circle cx="150" cy="132" r="62" fill="url(#aFruit)"/>
+          <path d="M150 72 c12 -20 34 -28 54 -23 c-5 24 -21 36 -44 38" fill="#3C9483"/>
+          <g fill="#9FD7C8" opacity=".85">
+            <circle cx="86" cy="88" r="12"/>
+            <circle cx="222" cy="80" r="9"/>
+            <circle cx="232" cy="176" r="7"/>
+          </g>
+          <path d="M100 170 q46 26 96 4" stroke="#fff" stroke-width="6" stroke-linecap="round" fill="none" opacity=".7"/>
+        </svg>
+      </div>
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">品牌理念</span>
+      <h2 class="sec-title">让鲜果的真实，<em>像水流一样被看见</em></h2>
+      <p>水密桃黄水流流成立于 2019 年夏天，最初只是三个人、一台相机和一片桃园。我们想做的事情很简单：不摆拍、不滤镜、不夸张，把果园里真实发生的光影与温度记录下来。</p>
+      <p>从清晨第一滴露水滑过桃皮，到山泉水沿着石缝流入蓄水池，我们把这些容易被忽略的瞬间剪成影像。品牌名字来自一句被反复念叨的形容——<strong>水密、桃黄、水流流</strong>，是对夏日果林最直白的敬意。</p>
+      <div class="value-list">
+        <div class="value-card">
+          <div class="ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.6 5.6L21 10l-4.5 4.2L17.8 21 12 17.7 6.2 21l1.3-6.8L3 10l6.4-1.4L12 3z" fill="currentColor"/></svg>
+          </div>
+          <h4>真实第一</h4>
+          <p>不修饰果实，不伪造场景，所有画面取自真实产地与采摘季。</p>
+        </div>
+        <div class="value-card">
+          <div class="ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          </div>
+          <h4>长期记录</h4>
+          <p>与同一片果园合作五年以上，用时间跨度呈现土地的变化。</p>
+        </div>
+        <div class="value-card">
+          <div class="ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 18c4-8 12-8 16 0" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/><circle cx="12" cy="7" r="3" fill="currentColor"/></svg>
+          </div>
+          <h4>温柔叙事</h4>
+          <p>影像节奏舒缓，保留环境声与呼吸感，让观众真正慢下来。</p>
+        </div>
+        <div class="value-card">
+          <div class="ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3C9 6.5 9 17.5 12 21" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <h4>产地共建</h4>
+          <p>影片收益部分回流果园，支持当地灌溉与可持续种植。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 作品系列 ================= -->
+<section class="works" id="works">
+  <div class="wrap">
+    <div class="works-head">
+      <div class="reveal">
+        <span class="eyebrow">作品系列</span>
+        <h2 class="sec-title">从枝头到杯中的<em>流动影像</em></h2>
+        <p class="sec-lead">每一个系列都对应一段真实的果园时节。点击筛选，找到你想看的那一阵夏日风。</p>
+      </div>
+      <div class="filters reveal" role="tablist" aria-label="作品分类筛选">
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="orchard">果园纪实</button>
+        <button class="filter-btn" data-filter="water">流水叙事</button>
+        <button class="filter-btn" data-filter="craft">鲜果制作</button>
+      </div>
+    </div>
+    <div class="works-grid" id="worksGrid">
+      <!-- cards injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ================= 数据 ================= -->
+<section class="metrics">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">影像影响力</span>
+      <h2 class="sec-title">被看见的<em>夏日</em></h2>
+      <p class="sec-lead">数据来自 2020—2024 年公开渠道统计，我们更在意的是这些数字背后，有多少人重新认识了身边的果园。</p>
+    </div>
+    <div class="metric-grid">
+      <div class="metric-card reveal"><div class="num"><span data-count="128">0</span><small>+</small></div><h4>上线影片</h4><p>覆盖 12 个省份的鲜果产区纪实</p></div>
+      <div class="metric-card reveal"><div class="num"><span data-count="1860">0</span><small>万</small></div><h4>累计播放</h4><p>全网播放与展映触达观众数量</p></div>
+      <div class="metric-card reveal"><div class="num"><span data-count="46">0</span><small>家</small></div><h4>合作果园</h4><p>长期共建、按季节回访的真实产地</p></div>
+      <div class="metric-card reveal"><div class="num"><span data-count="9">0</span><small>项</small></div><h4>影像奖项</h4><p>国内外自然与人文类纪录片提名</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 精选影片 ================= -->
+<section class="feature" id="feature">
+  <div class="wrap feature-inner">
+    <div class="player reveal">
+      <svg viewBox="0 0 800 450" role="img" aria-label="精选影片《水流过桃园》画面示意">
+        <defs>
+          <linearGradient id="pSky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#BFE3D8"/><stop offset="1" stop-color="#FFF1DC"/></linearGradient>
+          <linearGradient id="pWater" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#9FD7C8"/><stop offset="1" stop-color="#2F8575"/></linearGradient>
+          <linearGradient id="pPeach" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFD9A8"/><stop offset=".5" stop-color="#FF9A5C"/><stop offset="1" stop-color="#D95A28"/></linearGradient>
+        </defs>
+        <rect width="800" height="450" fill="url(#pSky)"/>
+        <circle cx="650" cy="90" r="70" fill="#FFE3C1" opacity=".7"/>
+        <path d="M0 290 Q200 240 400 278 T800 262 V450 H0Z" fill="#F1D7B8"/>
+        <path d="M0 340 Q220 300 460 336 T800 330 V450 H0Z" fill="url(#pWater)" opacity=".42"/>
+        <path d="M0 388 Q240 352 500 386 T800 376 V450 H0Z" fill="url(#pWater)" opacity=".66"/>
+        <g>
+          <rect x="150" y="176" width="14" height="150" rx="7" fill="#A9744F"/>
+          <ellipse cx="120" cy="176" rx="48" ry="30" fill="#6FB49D" transform="rotate(-20 120 176)"/>
+          <ellipse cx="196" cy="168" rx="46" ry="28" fill="#4E9C88" transform="rotate(14 196 168)"/>
+          <circle cx="140" cy="206" r="24" fill="url(#pPeach)"/>
+          <circle cx="182" cy="220" r="18" fill="url(#pPeach)"/>
+        </g>
+        <g>
+          <rect x="620" y="196" width="12" height="130" rx="6" fill="#A9744F"/>
+          <ellipse cx="590" cy="196" rx="42" ry="26" fill="#6FB49D" transform="rotate(-18 590 196)"/>
+          <ellipse cx="656" cy="188" rx="40" ry="25" fill="#4E9C88" transform="rotate(12 656 188)"/>
+          <circle cx="612" cy="220" r="20" fill="url(#pPeach)"/>
+          <circle cx="650" cy="232" r="16" fill="url(#pPeach)"/>
+        </g>
+        <g stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".75" fill="none">
+          <path d="M80 400 q50 -18 100 0"/>
+          <path d="M330 414 q58 -18 116 0"/>
+          <path d="M560 402 q50 -16 100 0"/>
+        </g>
+        <circle cx="400" cy="200" r="5" fill="#fff" opacity=".9"/>
+        <circle cx="300" cy="140" r="4" fill="#fff" opacity=".8"/>
+        <circle cx="500" cy="120" r="4" fill="#fff" opacity=".8"/>
+      </svg>
+      <div class="player-bar">
+        <div class="pb-play" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7L8 5z" fill="#fff"/></svg>
+        </div>
+        <span>水流过桃园 · 01</span>
+        <div class="progress"><i id="progressBar"></i></div>
+        <span id="timeLabel">02:14 / 06:30</span>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">本季精选</span>
+      <h2 class="sec-title">一部关于<em>等待</em>的短片</h2>
+      <p class="sec-lead">《水流过桃园》拍摄于浙南一处高山桃园，全片没有旁白，只有水声、风声和果农清晨的脚步。我们用一整个采摘季，等待一场恰到好处的晨雾。</p>
+      <div class="feature-list">
+        <div class="feat-item"><span class="idx">01</span><div><b>水流过桃园</b><small>果园纪实 · 06:30</small></div></div>
+        <div class="feat-item"><span class="idx">02</span><div><b>黄桃的第七道工序</b><small>鲜果制作 · 08:12</small></div></div>
+        <div class="feat-item"><span class="idx">03</span><div><b>山泉与灌溉渠</b><small>流水叙事 · 05:04</small></div></div>
+        <div class="feat-item"><span class="idx">04</span><div><b>露水未干时</b><small>果园纪实 · 04:48</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 制作流程 ================= -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;max-width:720px;margin:0 auto">
+      <span class="eyebrow" style="justify-content:center">制作流程</span>
+      <h2 class="sec-title">从踏进果园，到<em>影片上线</em></h2>
+      <p class="sec-lead" style="margin:0 auto">每一条影片都经历四个固定阶段。周期通常在 6—10 周，取决于果季与天气。</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal" data-n="01">
+        <div class="s-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21C7 17 4 13.5 4 9.5A4.5 4.5 0 0112 6a4.5 4.5 0 018 3.5C20 13.5 17 17 12 21z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+        </div>
+        <h4>产地勘察</h4>
+        <p>提前两个月进入产区，记录土壤、光照与水源条件，与果农共同制定拍摄日历。</p>
+      </div>
+      <div class="step reveal" data-n="02">
+        <div class="s-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="13" height="10" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M16 11l5-3v8l-5-3" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>实景拍摄</h4>
+        <p>使用自然光与轻量设备，尽量不干扰果园日常作业，保留真实环境声。</p>
+      </div>
+      <div class="step reveal" data-n="03">
+        <div class="s-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 18V8m5 10V5m5 13v-7m5 7V9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </div>
+        <h4>剪辑调色</h4>
+        <p>建立统一的夏日色调，保留果皮的自然质感，避免过度饱和与锐化。</p>
+      </div>
+      <div class="step reveal" data-n="04">
+        <div class="s-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>上线展映</h4>
+        <p>多平台同步发布，并配合果园线下放映，让产地居民成为第一批观众。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 团队 ================= -->
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;max-width:720px;margin:0 auto">
+      <span class="eyebrow" style="justify-content:center">创作团队</span>
+      <h2 class="sec-title">一群愿意<em>等一场雾</em>的人</h2>
+      <p class="sec-lead" style="margin:0 auto">团队常驻杭州与临安，另有长期合作的产地摄影师与声音采集者。</p>
+    </div>
+    <div class="team-grid">
+      <div class="member reveal">
+        <div class="avatar">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="76" r="34" fill="#fff" opacity=".9"/><path d="M40 180c8-36 30-54 60-54s52 18 60 54" fill="#fff" opacity=".9"/></svg>
+        </div>
+        <div class="info"><h4>沈棠</h4><span>导演 · 摄影师</span><p>十年自然纪录片经验，擅长自然光人物纪实。</p></div>
+      </div>
+      <div class="member reveal">
+        <div class="avatar">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="76" r="34" fill="#fff" opacity=".9"/><path d="M40 180c8-36 30-54 60-54s52 18 60 54" fill="#fff" opacity=".9"/></svg>
+        </div>
+        <div class="info"><h4>罗知远</h4><span>剪辑 · 调色</span><p>负责全片节奏与夏日色系设定，偏爱留白。</p></div>
+      </div>
+      <div class="member reveal">
+        <div class="avatar">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="76" r="34" fill="#fff" opacity=".9"/><path d="M40 180c8-36 30-54 60-54s52 18 60 54" fill="#fff" opacity=".9"/></svg>
+        </div>
+        <div class="info"><h4>何漾</h4><span>声音设计</span><p>采集果园环境声，构建属于夏天的听觉底色。</p></div>
+      </div>
+      <div class="member reveal">
+        <div class="avatar">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="76" r="34" fill="#fff" opacity=".9"/><path d="M40 180c8-36 30-54 60-54s52 18 60 54" fill="#fff" opacity=".9"/></svg>
+        </div>
+        <div class="info"><h4>陶青</h4><span>产地联络</span><p>常年往返各产区，负责与果农的长期协作。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 社区 ================= -->
+<section class="community" id="community">
+  <div class="wrap comm-grid">
+    <div class="reveal">
+      <div class="post-card">
+        <div class="post-head">
+          <div class="post-ava"></div>
+          <div><b>阿荔</b><small>临安 · 果园志愿者 · 2 小时前</small></div>
+        </div>
+        <p>跟着水密桃黄水流流进园子拍了一天，才知道一只桃子要经过七道筛选。影像里那片晨雾我等了三个早上，值了。</p>
+        <div class="post-foot"><span>♡ 128</span><span>💬 24</span><span>↗ 分享</span></div>
+      </div>
+      <div class="post-card">
+        <div class="post-head">
+          <div class="post-ava v2"></div>
+          <div><b>山间小满</b><small>奉化 · 摄影爱好者 · 昨天</small></div>
+        </div>
+        <p>《水流过桃园》里的水声太治愈了，后来才知道是现场同期声。这种克制真的很难得，希望多出几部。</p>
+        <div class="post-foot"><span>♡ 96</span><span>💬 17</span><span>↗ 分享</span></div>
+      </div>
+      <div class="post-card">
+        <div class="post-head">
+          <div class="post-ava"></div>
+          <div><b>桃园老周</b><small>产地合作果农 · 3 天前</small></div>
+        </div>
+        <p>拍片的人每年都来，不催不赶。今年水渠修好了，他们说下一部要拍这个。我们果园也被更多人知道了。</p>
+        <div class="post-foot"><span>♡ 214</span><span>💬 52</span><span>↗ 分享</span></div>
+      </div>
+    </div>
+    <div class="comm-cta reveal">
+      <h3>加入夏日影像社区</h3>
+      <p>每月我们会发布一次产地拍摄计划与放映日程。订阅后，你能第一时间收到新片通知、线下活动邀请与果园开放日信息。</p>
+      <form class="comm-form" id="subForm" novalidate>
+        <input type="email" id="subEmail" placeholder="请输入你的邮箱地址" aria-label="邮箱地址" required>
+        <button type="submit">订阅更新</button>
+      </form>
+      <p class="form-note">我们每月最多发送两封邮件，随时可以退订。</p>
+      <p class="form-success" id="formSuccess">✓ 订阅成功，感谢你与我们一起等待下一个夏天。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;max-width:720px;margin:0 auto">
+      <span class="eyebrow" style="justify-content:center">常见问题</span>
+      <h2 class="sec-title">关于影像与<em>合作</em></h2>
+      <p class="sec-lead" style="margin:0 auto">如果你正准备与我们合作，或只是想更了解这些影片，以下问题或许能帮到你。</p>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">水密桃黄水流流的影片可以商用吗？<span class="plus">+</span></button>
+        <div class="faq-a"><p>可以。我们提供标准授权与定制授权两种方式，覆盖品牌宣传、线下展映、社交平台投放等场景。具体授权范围与费用请通过合作洽谈表单联系我们，我们会根据使用渠道给出清晰报价。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">拍摄周期一般需要多久？<span class="plus">+</span></button>
+        <div class="faq-a"><p>常规产地纪实短片约 6—10 周，其中拍摄集中在果季的 3—5 天，其余时间用于前期勘察、素材整理与后期制作。若涉及跨季节叙事，周期会按实际果期顺延，我们会在立项时给出明确排期。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">可以到我们的果园或工厂拍摄吗？<span class="plus">+</span></button>
+        <div class="faq-a"><p>欢迎。我们更倾向于与有长期记录价值的产地合作，例如坚持生态种植、有稳定灌溉系统或独特加工工艺的果园与工坊。请提前告知产地位置、果期与可拍摄范围，我们会先做一次远程沟通。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">影片会使用旁白或配乐吗？<span class="plus">+</span></button>
+        <div class="faq-a"><p>大部分作品以环境同期声为主，不添加旁白，配乐只在不干扰真实声音的前提下少量使用。我们希望观众听到风吹过桃叶、水沿着石缝流动的声音，这是影像最珍贵的部分。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">如何参与线下放映或产地开放日？<span class="plus">+</span></button>
+        <div class="faq-a"><p>订阅我们的更新邮件即可收到活动通知。放映通常安排在果园所在地的公共空间，开放日则需要提前报名并遵守产地安全指引。所有活动均免费，名额有限。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">你们会接受品牌定制内容吗？<span class="plus">+</span></button>
+        <div class="faq-a"><p>会，但有前提：产品本身与鲜果、农业或自然生活方式相关，且允许我们保留真实拍摄原则。我们不承接摆拍式广告，也不会为产品添加未经证实的功效描述。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 联系 ================= -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="color:#FFE3C1">合作洽谈</span>
+      <h2>让下一个夏天，<br>被更好地记录</h2>
+      <p class="lead">无论你是果园主、品牌方，还是想把一段夏日故事拍成影片的创作者，都欢迎写信给我们。通常两个工作日内回复。</p>
+    </div>
+    <div class="contact-grid">
+      <div class="c-item reveal">
+        <small>合作邮箱</small>
+        <b>hello@peachflow.studio</b>
+      </div>
+      <div class="c-item reveal">
+        <small>产地联络</small>
+        <b>+86 571 8800 2046</b>
+      </div>
+      <div class="c-item reveal">
+        <small>工作室地址</small>
+        <b>浙江杭州 · 临安果园影像基地</b>
+      </div>
+    </div>
+    <div class="reveal" style="display:flex;gap:16px;flex-wrap:wrap">
+      <a href="mailto:hello@peachflow.studio" class="btn-primary" style="background:#fff;color:#D95A28;box-shadow:0 16px 34px -16px rgba(0,0,0,.35)">
+        发送合作邮件
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#works" class="btn-ghost" style="border-color:rgba(255,255,255,.5);color:#fff;background:rgba(255,255,255,.1)">再看一次作品</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= Footer ================= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <svg width="34" height="34" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+            <rect width="44" height="44" rx="13" fill="#FF9A5C"/>
+            <path d="M22 12c5 0 9 4.2 9 9.4 0 6.2-4.8 11.6-9 11.6s-9-5.4-9-11.6C13 16.2 17 12 22 12z" fill="#fff" opacity=".92"/>
+            <path d="M22 12c1.4-2.6 3.6-3.6 6-3.2-.4 2.8-2.2 4.4-4.6 4.8" fill="#2F8575"/>
+          </svg>
+          <span style="color:#fff">水密桃黄水流流</span>
+        </div>
+        <p>专注鲜果与夏日流水的纪实影像品牌。以真实、克制、长期的记录方式，让土地与果实被更多人看见。</p>
+      </div>
+      <div class="footer-col">
+        <h5>探索</h5>
+        <a href="#about">品牌理念</a>
+        <a href="#works">作品系列</a>
+        <a href="#feature">本季精选</a>
+        <a href="#team">创作团队</a>
+      </div>
+      <div class="footer-col">
+        <h5>合作</h5>
+        <a href="#process">制作流程</a>
+        <a href="#contact">联系洽谈</a>
+        <a href="#faq">常见问题</a>
+        <a href="#community">社区订阅</a>
+      </div>
+      <div class="footer-col">
+        <h5>关注</h5>
+        <a href="#community">邮件通讯</a>
+        <a href="#works">影片更新</a>
+        <a href="#contact">产地开放日</a>
+        <a href="#contact">媒体资料</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 水密桃黄水流流 · 保留所有权利</span>
+      <div class="socials">
+        <a href="#community" aria-label="邮件通讯">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 7l8.5 6 8.5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+        <a href="#works" aria-label="视频平台">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M10 9.5l5 2.5-5 2.5v-5z" fill="currentColor"/></svg>
+        </a>
+        <a href="#community" aria-label="社区">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="3.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="10" r="2.4" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5M14.5 19c.4-2.4 1.9-3.8 3.8-3.8 1.6 0 2.9 1 3.4 2.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="返回顶部">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M6 11l6-6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ============ 数据：作品系列 ============ */
+  var worksData = [
+    {
+      id:'w1',
+      cat:'orchard',
+      catLabel:'果园纪实',
+      title:'露水未干时',
+      dur:'04:48',
+      desc:'清晨五点半的高山桃园，露水顺着桃皮滑落。果农开始第一轮巡园，镜头只做安静的旁观者。',
+      meta:'临安 · 2024 夏',
+      tag:'晨光',
+      palette:['#FFE7C9','#FFB877','#4E9C88']
+    },
+    {
+      id:'w2',
+      cat:'water',
+      catLabel:'流水叙事',
+      title:'山泉与灌溉渠',
+      dur:'05:04',
+      desc:'一条从山腰引下的水渠，滋养了整片桃林。影片沿着水流，讲述灌溉系统与几代果农的合作。',
+      meta:'奉化 · 2023 夏',
+      tag:'水声',
+      palette:['#BFE3D8','#63B3A3','#2F8575']
+    },
+    {
+      id:'w3',
+      cat:'craft',
+      catLabel:'鲜果制作',
+      title:'黄桃的第七道工序',
+      dur:'08:12',
+      desc:'从清洗、切分到低温慢煮，工坊里每一步都由人手工完成。影片记录一整批黄桃的完整加工流程。',
+      meta:'台州 · 2024 夏',
+      tag:'手作',
+      palette:['#FFD9A8','#FF9A5C','#D95A28']
+    },
+    {
+      id:'w4',
+      cat:'orchard',
+      catLabel:'果园纪实',
+      title:'一整个采摘季',
+      dur:'11:26',
+      desc:'跨越六周的延时记录，从青果到成熟。果实的颜色变化，成为整部影片最动人的时间线。',
+      meta:'丽水 · 2023 夏',
+      tag:'时间',
+      palette:['#FFF1DC','#A8D9C2','#3C9483']
+    },
+    {
+      id:'w5',
+      cat:'water',
+      catLabel:'流水叙事',
+      title:'雨后三小时',
+      dur:'06:18',
+      desc:'一场夏日雷雨过后，果园里的积水、沟渠与叶片上的水珠。我们只记录雨后三小时的静默变化。',
+      meta:'杭州 · 2024 夏',
+      tag:'降雨',
+      palette:['#CFE8DF','#9FD7C8','#2F8575']
+    },
+    {
+      id:'w6',
+      cat:'craft',
+      catLabel:'鲜果制作',
+      title:'一杯桃饮的诞生',
+      dur:'07:32',
+      desc:'从现摘鲜果到一杯冰饮，全程在产地完成。镜头跟随果农的女儿，完成她第一次独立出品。',
+      meta:'金华 · 2024 夏',
+      tag:'鲜榨',
+      palette:['#FFE3C1','#FFB877','#E5642F']
+    },
+    {
+      id:'w7',
+      cat:'orchard',
+      catLabel:'果园纪实',
+      title:'老周与他的水渠',
+      dur:'09:54',
+      desc:'合作果农老周修了三十年的水渠。影片以人物口述与实地行走，呈现一条水渠与一个村庄的关系。',
+      meta:'临安 · 2022 夏',
+      tag:'人物',
+      palette:['#F7E2CC','#C9A227','#8A5B3C']
+    },
+    {
+      id:'w8',
+      cat:'water',
+      catLabel:'流水叙事',
+      title:'溪边的午后',
+      dur:'03:46',
+      desc:'没有旁白，没有配乐。只有溪水、蝉鸣和偶尔经过的风，适合在夏夜里安静地看完。',
+      meta:'安吉 · 2023 夏',
+      tag:'静默',
+      palette:['#D9EFE6','#63B3A3','#1F6E60']
+    },
+    {
+      id:'w9',
+      cat:'craft',
+      catLabel:'鲜果制作',
+      title:'低温慢煮的十二小时',
+      dur:'10:08',
+      desc:'恒温水浴里，黄桃与糖缓慢交换风味。我们记录温度曲线，也记录等待中工坊的日常声响。',
+      meta:'台州 · 2023 夏',
+      tag:'温度',
+      palette:['#FFF3E2','#FFB877','#B04E22']
+    }
+  ];
+
+  /* ============ 生成影片缩略 SVG ============ */
+  function thumbSVG(item, idx){
+    var p = item.palette;
+    var gid = 'g_' + item.id;
+    return '' +
+    '<svg viewBox="0 0 400 250" role="img" aria-label="'+ item.title +' 画面示意">' +
+      '<defs>' +
+        '<linearGradient id="'+gid+'a" x1="0" y1="0" x2="0" y2="1">' +
+          '<stop stop-color="'+p[0]+'"/><stop offset="1" stop-color="'+p[1]+'"/>' +
+        '</linearGradient>' +
+        '<linearGradient id="'+gid+'b" x1="0" y1="0" x2="1" y2="1">' +
+          '<stop stop-color="'+p[1]+'"/><stop offset="1" stop-color="'+p[2]+'"/>' +
+        '</linearGradient>' +
+      '</defs>' +
+      '<rect width="400" height="250" fill="url(#'+gid+'a)"/>' +
+      '<circle cx="'+(320 - (idx%3)*18)+'" cy="'+(52 + (idx%2)*8)+'" r="30" fill="#fff" opacity=".32"/>' +
+      '<path d="M0 172 Q100 148 200 168 T400 158 V250 H0Z" fill="url(#'+gid+'b)" opacity=".55"/>' +
+      '<path d="M0 204 Q110 182 220 202 T400 196 V250 H0Z" fill="url(#'+gid+'b)" opacity=".8"/>' +
+      '<g>' +
+        '<rect x="'+(60 + (idx%2)*30)+'" y="96" width="9" height="86" rx="4.5" fill="#8A5B3C" opacity=".8"/>' +
+        '<ellipse cx="'+(50 + (idx%2)*30)+'" cy="100" rx="30" ry="19" fill="'+p[2]+'" opacity=".8" transform="rotate(-18 '+(50 + (idx%2)*30)+' 100)"/>' +
+        '<ellipse cx="'+(86 + (idx%2)*30)+'" cy="94" rx="28" ry="17" fill="'+p[2]+'" opacity=".65" transform="rotate(12 '+(86 + (idx%2)*30)+' 94)"/>' +
+        '<circle cx="'+(68 + (idx%2)*30)+'" cy="128" r="16" fill="#fff" opacity=".85"/>' +
+        '<circle cx="'+(92 + (idx%2)*30)+'" cy="138" r="11" fill="#fff" opacity=".7"/>' +
+      '</g>' +
+      '<g stroke="#fff" stroke-width="2.2" stroke-linecap="round" opacity=".6" fill="none">' +
+        '<path d="M'+(240+(idx%2)*24)+' 214 q26 -10 52 0"/>' +
+        '<path d="M'+(300+(idx%2)*18)+' 228 q22 -8 44 0"/>' +
+      '</g>' +
+    '</svg>';
+  }
+
+  /* ============ 渲染作品卡片 ============ */
+  var grid = document.getElementById('worksGrid');
+  function renderWorks(filter){
+    var list = worksData.filter(function(w){
+      return filter === 'all' || w.cat === filter;
+    });
+    grid.innerHTML = list.map(function(w, i){
+      return '' +
+      '<article class="work-card reveal" data-cat="'+ w.cat +'">' +
+        '<div class="work-thumb">' +
+          thumbSVG(w, i) +
+          '<span class="work-cat">'+ w.catLabel +'</span>' +
+          '<span class="work-dur">'+ w.dur +'</span>' +
+          '<div class="play-hint"><span class="pc">' +
+            '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7L8 5z" fill="currentColor"/></svg>' +
+          '</span></div>' +
+        '</div>' +
+        '<div class="work-body">' +
+          '<h3>'+ w.title +'</h3>' +
+          '<p>'+ w.desc +'</p>' +
+          '<div class="work-meta"><span>'+ w.meta +'</span><span class="tag">'+ w.tag +'</span></div>' +
+        '</div>' +
+      '</article>';
+    }).join('');
+    revealObserver && bindReveal();
+  }
+
+  /* ============ 作品筛选 ============ */
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filterBtns.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      renderWorks(btn.getAttribute('data-filter'));
+    });
+  });
+
+  /* ============ 滚动淡入 ============ */
+  var revealObserver = null;
+  function bindReveal(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){
+      els.forEach(function(el){ el.classList.add('in'); });
+      return;
+    }
+    if(!revealObserver){
+      revealObserver = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(en.isIntersecting){
+            en.target.classList.add('in');
+            revealObserver.unobserve(en.target);
+          }
+        });
+      }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    }
+    els.forEach(function(el){
+      if(!el.classList.contains('in')) revealObserver.observe(el);
+    });
+  }
+
+  /* ============ 数字增长 ============ */
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+    var suffix = el.getAttribute('data-suffix') || '';
+    var start = null, dur = 1500;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = Math.round(target * eased);
+      if(target >= 1000){
+        el.textContent = val.toLocaleString('en-US');
+      } else {
+        el.textContent = val;
+      }
+      if(p < 1) requestAnimationFrame(step);
+      else el.textContent = (target >= 1000 ? target.toLocaleString('en-US') : target) + suffix;
+    }
+    requestAnimationFrame(step);
+  }
+  function initCounters(){
+    var counters = document.querySelectorAll('[data-count]');
+    if(!('IntersectionObserver' in window)){
+      counters.forEach(animateCount);
+      return;
+    }
+    var co = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          animateCount(en.target);
+          co.unobserve(en.target);
+        }
+      });
+    }, {threshold:.5});
+    counters.forEach(function(c){ co.observe(c); });
+  }
+
+  /* ============ FAQ 手风琴 ============ */
+  var faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      faqItems.forEach(function(it){
+        it.classList.remove('open');
+        it.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        it.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        q.setAttribute('aria-expanded', 'true');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* ============ 移动端菜单 ============ */
+  var burger = document.getElementById('burger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', function(){
+    var open = mobileMenu.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mobileMenu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      mobileMenu.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* ============ 头部滚动阴影 & 返回顶部 ============ */
+  var header = document.getElementById('siteHeader');
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    var y = window.scrollY;
+    header.classList.toggle('scrolled', y > 12);
+    toTop.classList.toggle('show', y > 560);
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* ============ 订阅表单 ============ */
+  var subForm = document.getElementById('subForm');
+  var subEmail = document.getElementById('subEmail');
+  var formSuccess = document.getElementById('formSuccess');
+  subForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var val = subEmail.value.trim();
+    var ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val);
+    if(!ok){
+      subEmail.style.borderColor = '#FFB877';
+      subEmail.focus();
+      return;
+    }
+    subEmail.style.borderColor = 'rgba(255,255,255,.24)';
+    subEmail.value = '';
+    formSuccess.style.display = 'block';
+    setTimeout(function(){ formSuccess.style.display = 'none'; }, 6000);
+  });
+
+  /* ============ 播放条轻微进度动画 ============ */
+  var bar = document.getElementById('progressBar');
+  var timeLabel = document.getElementById('timeLabel');
+  if(bar){
+    var progress = 34;
+    setInterval(function(){
+      progress = progress >= 100 ? 12 : progress + 1.4;
+      bar.style.width = progress + '%';
+      var total = 390; // 06:30
+      var cur = Math.round(total * progress / 100);
+      var m = String(Math.floor(cur/60)).padStart(2,'0');
+      var s = String(cur%60).padStart(2,'0');
+      timeLabel.textContent = m + ':' + s + ' / 06:30';
+    }, 900);
+  }
+
+  /* ============ 精选影片列表交互 ============ */
+  var featItems = document.querySelectorAll('.feat-item');
+  featItems.forEach(function(it, i){
+    it.addEventListener('click', function(){
+      featItems.forEach(function(x){ x.style.background = '#fff'; x.style.borderColor = 'var(--line)'; });
+      it.style.background = '#FFF3E2';
+      it.style.borderColor = 'var(--peach-3)';
+      if(bar){ progress = 8 + i * 9; bar.style.width = progress + '%'; }
+    });
+  });
+
+  /* ============ 初始化 ============ */
+  renderWorks('all');
+  bindReveal();
+  initCounters();
+})();
+</script>
+</body>
+  </html>
